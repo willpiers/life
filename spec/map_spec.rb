@@ -1,9 +1,10 @@
+require 'matrix'
 require 'map'
 
 describe Map do
-	describe '#current_map' do
-		it 'is a matrix' do
-			expect(Map.new('1 1 0 1').current_map).to be_a Matrix
-		end
-	end
+  describe '#next_map' do
+    it 'is a matrix' do
+      expect(Map.new(Matrix[[1,2],[3,4]]).next_map).to be_a Matrix
+    end
+  end
 end
