@@ -4,9 +4,8 @@ require_relative 'cell'
 class Map
 	attr_reader :current_map, :rows, :columns
 
-	def initialize cell_string
-		rows = cell_string.split("\n").map { |row| row.split }
-		@current_map = Matrix.rows(rows).map { |el| el.to_i }
+	def initialize map
+		@current_map = map
 		@rows = current_map.row_count
 		@columns = current_map.column_count
 	end
