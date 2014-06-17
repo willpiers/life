@@ -13,7 +13,7 @@ end
 m = Matrix.rows(rows)
 starting_map = Map.new m
 
-1000.times do
+200.times do
   system 'clear'
   starting_map.next_map.to_a.each do |row|
     printable_row = row.map do |val|
